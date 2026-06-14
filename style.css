@@ -2639,3 +2639,267 @@ textarea.form-control {
     animation: fadeIn 0.4s ease;
 }
 
+/* ============================================================
+   MOBILE-FIRST ENHANCEMENTS
+   Comprehensive UX pass for smartphones (≤768px / ≤480px)
+   ============================================================ */
+
+/* ── Mobile Bottom Navigation Bar ──────────────────────────── */
+.mob-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    background-color: var(--color-bg-dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 1000;
+    padding: 0 0.25rem;
+    padding-bottom: env(safe-area-inset-bottom);
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.mob-nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    text-decoration: none;
+    color: rgba(248, 249, 250, 0.42);
+    font-family: var(--font-sans);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.5rem 0.25rem;
+    transition: color 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+    min-height: 44px;
+}
+
+.mob-nav-item svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.mob-nav-item.active {
+    color: var(--color-primary);
+}
+
+.mob-nav-item:not(.mob-nav-call):not(.mob-nav-cta):active {
+    color: var(--color-primary);
+}
+
+.mob-nav-call {
+    color: #4ade80;
+}
+.mob-nav-call:active {
+    color: #22c55e;
+}
+
+.mob-nav-cta {
+    color: var(--color-accent);
+}
+.mob-nav-cta:active {
+    color: #f0d070;
+}
+
+/* ── Tablet/mobile activate ─────────────────────────────────── */
+@media (max-width: 768px) {
+
+    .mob-nav {
+        display: flex;
+        align-items: stretch;
+    }
+
+    /* Reserve space so content isn't hidden behind the bar */
+    body {
+        padding-bottom: 4rem;
+    }
+
+    /* Shift floating FABs above the bottom nav */
+    .floating-cta {
+        bottom: 5.25rem;
+    }
+
+    /* Tooltips are hover-only — useless on touch */
+    .fab-tooltip {
+        display: none !important;
+    }
+
+    /* ── Prevent iOS double-tap zoom on focused inputs ──────── */
+    input, select, textarea {
+        font-size: 16px !important;
+    }
+
+    /* ── Touch-friendly tap targets (WCAG 2.5.5) ────────────── */
+    .btn {
+        min-height: 48px;
+    }
+    .faq-question {
+        min-height: 56px;
+    }
+
+    /* ── Section padding reduction ──────────────────────────── */
+    .testimonials-section {
+        padding: 4rem 0;
+    }
+    .boil-calc-section {
+        padding: 4rem 0;
+    }
+    .fresh-catch-section {
+        padding: 3.5rem 0;
+    }
+    .newsletter-section {
+        padding: 3.5rem 0;
+    }
+    .faq-section {
+        padding: 3.5rem 0;
+    }
+    .how-it-works {
+        padding: 3rem 0 3.5rem;
+    }
+    .stats-bar {
+        padding: 2rem 0;
+    }
+
+    /* ── Boil Calculator — missing mobile CSS ───────────────── */
+    .boil-calc-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .boil-calc-card {
+        padding: 2rem 1.5rem;
+    }
+    .calc-radio-group {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+    .calc-results {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+    .calc-title {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    /* ── SMS Alert Card — stacking ──────────────────────────── */
+    .sms-alert-card {
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+    }
+    .sms-alert-info {
+        max-width: 100%;
+    }
+    .sms-alert-info h3 {
+        font-size: 1.75rem;
+    }
+    .sms-alert-form {
+        flex-direction: column;
+    }
+    .sms-alert-form-wrapper {
+        max-width: 100%;
+    }
+
+    /* ── Testimonials ────────────────────────────────────────── */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    .testimonial-card {
+        padding: 1.75rem;
+    }
+
+    /* ── Story section inline-style grid override ────────────── */
+    /* inline style="grid-template-columns:0.9fr 1.1fr" overrides
+       the 1024px media query via specificity — needs !important  */
+    .hero-grid[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+
+    /* ── Story section inline-style flex pair ────────────────── */
+    /* "Daily Shipments / Family Values" horizontal block        */
+    .split-section div[style*="display: flex"][style*="gap: 3rem"] {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+    }
+
+    /* ── Section intro ───────────────────────────────────────── */
+    .section-intro {
+        margin-bottom: 2rem;
+    }
+
+    /* ── Product card hover → active ────────────────────────── */
+    .product-card:active {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+    }
+}
+
+/* ── Very small phones (≤480px) ──────────────────────────────── */
+@media (max-width: 480px) {
+
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.85rem; }
+
+    /* Hero vertical padding */
+    .hero {
+        padding: 7rem 0 3.5rem;
+    }
+
+    /* Boil calc: single column at very small sizes */
+    .calc-radio-group {
+        grid-template-columns: 1fr;
+    }
+    .calc-results {
+        grid-template-columns: 1fr;
+    }
+    .boil-calc-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    /* Catch cards */
+    .catch-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    /* Newsletter */
+    .newsletter-form-wrap {
+        padding: 1.75rem 1.25rem;
+    }
+
+    /* Inquiry */
+    .inquiry-panel-left,
+    .inquiry-form-container {
+        padding: 1.5rem;
+    }
+
+    /* Product image height */
+    .product-img {
+        height: 160px;
+    }
+
+    /* Footer legal links */
+    .footer-legal-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    /* Mob nav slightly taller on very small screens */
+    .mob-nav {
+        height: 4.25rem;
+    }
+    body {
+        padding-bottom: 4.25rem;
+    }
+}
+

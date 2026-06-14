@@ -490,4 +490,23 @@ document.addEventListener('DOMContentLoaded', () => {
             smsSuccessMsg.style.display = 'block';
         });
     }
+
+
+    // ==========================================
+    // MOBILE BOTTOM NAV — ACTIVE STATE
+    // ==========================================
+    const mbnItems = document.querySelectorAll('.mob-nav-item[data-mbn]');
+    if (mbnItems.length) {
+        const path = window.location.pathname.toLowerCase();
+        let page = 'home';
+        if (path.includes('wholesale')) page = 'wholesale';
+        else if (path.includes('restaurant')) page = 'restaurant';
+
+        mbnItems.forEach(item => {
+            if (item.dataset.mbn === page) {
+                item.classList.add('active');
+                item.setAttribute('aria-current', 'page');
+            }
+        });
+    }
 });
