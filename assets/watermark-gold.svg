@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Watermark: Gold on transparent — premium/upscale variant for menus & packaging -->
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <path id="wg-top" d="M 75,250 A 175,175 0 0,1 425,250"/>
+        <path id="wg-bot" d="M 70,250 A 180,180 0 0,1 430,250"/>
+    </defs>
+
+    <g opacity="0.45" fill="#E5C158" stroke="none">
+
+        <!-- ── Double ring border ── -->
+        <circle cx="250" cy="250" r="232" fill="none" stroke="#E5C158" stroke-width="9"/>
+        <circle cx="250" cy="250" r="218" fill="none" stroke="#E5C158" stroke-width="3"/>
+
+        <!-- ── Top arc label ── -->
+        <text font-family="Georgia,'Times New Roman',serif" font-size="30" font-weight="700"
+              letter-spacing="8" fill="#E5C158">
+            <textPath href="#wg-top" startOffset="50%" text-anchor="middle">LC WHOLESALE</textPath>
+        </text>
+
+        <!-- ── Crab illustration ── -->
+        <g transform="translate(250,218)" fill="#E5C158">
+            <ellipse cx="0" cy="8" rx="52" ry="38"/>
+            <path d="M-28,-2 Q0,-25 28,-2" fill="none" stroke="#E5C158" stroke-width="5"/>
+            <line x1="-11" y1="-28" x2="-18" y2="-44" stroke="#E5C158" stroke-width="5" stroke-linecap="round"/>
+            <line x1="11"  y1="-28" x2="18"  y2="-44" stroke="#E5C158" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="-20" cy="-50" r="7"/>
+            <circle cx="20"  cy="-50" r="7"/>
+            <path d="M-52,0 C-64,-16 -90,-22 -98,-8 C-106,4 -98,16 -84,20 C-70,24 -58,12 -52,4Z"/>
+            <path d="M52,0 C64,-16 90,-22 98,-8 C106,4 98,16 84,20 C70,24 58,12 52,4Z"/>
+            <line x1="-48" y1="3"  x2="-82" y2="-10" stroke="#E5C158" stroke-width="6" stroke-linecap="round"/>
+            <line x1="-50" y1="14" x2="-85" y2="14"  stroke="#E5C158" stroke-width="6" stroke-linecap="round"/>
+            <line x1="-48" y1="25" x2="-80" y2="38"  stroke="#E5C158" stroke-width="5" stroke-linecap="round"/>
+            <line x1="-42" y1="37" x2="-66" y2="53"  stroke="#E5C158" stroke-width="5" stroke-linecap="round"/>
+            <line x1="48"  y1="3"  x2="82"  y2="-10" stroke="#E5C158" stroke-width="6" stroke-linecap="round"/>
+            <line x1="50"  y1="14" x2="85"  y2="14"  stroke="#E5C158" stroke-width="6" stroke-linecap="round"/>
+            <line x1="48"  y1="25" x2="80"  y2="38"  stroke="#E5C158" stroke-width="5" stroke-linecap="round"/>
+            <line x1="42"  y1="37" x2="66"  y2="53"  stroke="#E5C158" stroke-width="5" stroke-linecap="round"/>
+        </g>
+
+        <!-- ── SEAFOOD headline ── -->
+        <text x="250" y="336" text-anchor="middle"
+              font-family="'Arial Black',Impact,sans-serif"
+              font-size="60" font-weight="900" letter-spacing="1" fill="#E5C158">SEAFOOD</text>
+
+        <!-- ── Phone number ── -->
+        <text x="250" y="372" text-anchor="middle"
+              font-family="Arial,Helvetica,sans-serif"
+              font-size="26" font-weight="700" fill="#E5C158">(214) 846-0985</text>
+
+        <!-- ── Bottom arc tagline ── -->
+        <text font-family="Georgia,'Times New Roman',serif"
+              font-size="21" font-style="italic" fill="#E5C158">
+            <textPath href="#wg-bot" startOffset="50%" text-anchor="middle">Best Seafood Quality</textPath>
+        </text>
+
+    </g>
+</svg>
