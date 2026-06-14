@@ -1,0 +1,21 @@
+{
+    "name": "Louisiana Wholesale Seafood",
+    "short_name": "LA Seafood",
+    "description": "Premium Gulf Coast seafood distributor and Fat Oysters Restaurant in Plano, TX.",
+    "start_url": "/",
+    "display": "browser",
+    "background_color": "#FEF9F3",
+    "theme_color": "#EC1D27",
+    "icons": [
+        {
+            "src": "assets/Logo.jpg",
+            "sizes": "192x192",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "assets/Logo.jpg",
+            "sizes": "512x512",
+            "type": "image/jpeg"
+        }
+    ]
+}

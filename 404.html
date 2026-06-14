@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Louisiana Wholesale Seafood</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/jpeg" href="assets/Logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            background-color: var(--color-bg-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .error-inner {
+            max-width: 540px;
+        }
+
+        .error-code {
+            font-family: var(--font-serif);
+            font-size: clamp(5rem, 15vw, 9rem);
+            font-weight: 700;
+            color: var(--color-primary);
+            line-height: 1;
+            margin: 0 0 0.5rem;
+            opacity: 0.85;
+        }
+
+        .error-title {
+            font-family: var(--font-serif);
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            font-weight: 700;
+            color: var(--color-text-light);
+            margin: 0 0 1rem;
+        }
+
+        .error-desc {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            color: rgba(248, 249, 250, 0.6);
+            line-height: 1.7;
+            margin: 0 0 2.5rem;
+        }
+
+        .error-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .error-divider {
+            width: 48px;
+            height: 3px;
+            background-color: var(--color-accent);
+            border: none;
+            border-radius: 2px;
+            margin: 1.5rem auto;
+        }
+
+        .error-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .error-nav-label {
+            font-family: var(--font-sans);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(248, 249, 250, 0.35);
+            margin-bottom: 0.25rem;
+        }
+
+        .error-nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 1.5rem;
+        }
+
+        .error-nav-links a {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            color: rgba(248, 249, 250, 0.55);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .error-nav-links a:hover {
+            color: var(--color-accent);
+        }
+    </style>
+</head>
+<body style="background-color: var(--color-bg-dark);">
+
+    <div class="error-page">
+        <div class="error-inner">
+            <p class="error-code">404</p>
+            <h1 class="error-title">This catch got away.</h1>
+            <hr class="error-divider">
+            <p class="error-desc">The page you're looking for doesn't exist or may have been moved. Head back and we'll get you sorted out.</p>
+
+            <div class="error-links">
+                <a href="index.html" class="btn btn-primary">Back to Homepage</a>
+                <a href="wholesale.html" class="btn btn-outline" style="color: var(--color-text-light); border-color: rgba(255,255,255,0.25);">Wholesale B2B</a>
+                <a href="restaurant.html" class="btn btn-gold">Fat Oysters Restaurant</a>
+            </div>
+
+            <div class="error-nav">
+                <p class="error-nav-label">Or jump to</p>
+                <nav class="error-nav-links" aria-label="Quick links">
+                    <a href="wholesale.html#inquiry">Request a Quote</a>
+                    <a href="restaurant.html#menu">View Menu</a>
+                    <a href="restaurant.html#location">Find Us</a>
+                    <a href="index.html#sms-alerts">Fresh Catch Alerts</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
